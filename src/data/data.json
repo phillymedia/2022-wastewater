@@ -1,0 +1,1995 @@
+{
+  "theme": {
+    "font": "serif",
+    "background": "cyan"
+  },
+  "content": [
+    {
+      "type": "hero",
+      "value": [
+        {
+          "type": "font",
+          "value": "serif"
+        },{
+          "type": "background",
+          "value": "black"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "This is documentation for how to put together templated interactive pages on Inquirer.com. A **templated interactive** is an article that requires extra functionality and design. These are more complex than a typical longform, but not as involved as a fully custom interactive."
+    },
+    {
+      "type": "text",
+      "value": "The content in templated interactives comes from an **Archie Document**. These are Google Docs with special labels and brackets that help sort the information – if you’re curious, you can read more about ArchieML [here](http://archieml.org/)."
+    },
+    {
+      "type": "text",
+      "value": "When you copy code from this page, it is important that you copy the *entire* code block— including those closing tags!"
+    },
+    {
+      "type": "text",
+      "value": "If you’re already here, you’ve probably created a new project within Innovator. If not, [visit the Innovator app](https://slack.com/app_redirect?app=A01JMPVBJDS&tab=home) within Slack. This is a custom Slack app you can use to create and update interactives without needing a developer."
+    },
+    {
+      "type": "text",
+      "value": "**Blocks:**"
+    },
+    {
+      "type": "text",
+      "value": "A templated interactive consists of a variety of blocks. These blocks can be combined in whatever way the story requires. Here you will find examples of the Archie Doc formatting, and see what the resulting block looks like on the page."
+    },
+    {
+      "type": "text",
+      "value": "If you run into problems or have any questions please reach out to **@interactives** on Slack."
+    },
+    {
+      "type": "list",
+      "value": [
+        {
+          "type": "text",
+          "value": "[Ad](#ad)"
+        },
+        {
+          "type": "text",
+          "value": "[Combo](#combo)"
+        },
+        {
+          "type": "text",
+          "value": "[Credits](#credits)"
+        },
+        {
+          "type": "text",
+          "value": "[Conversation](#conversation)"
+        },
+        {
+          "type": "text",
+          "value": "[Endmark](#endmark)"
+        },
+        {
+          "type": "text",
+          "value": "[Graphic](#graphic)"
+        },
+        {
+          "type": "text",
+          "value": "[Heading](#heading)"
+        },
+        {
+          "type": "text",
+          "value": "[Hero](#hero)"
+        },
+        {
+          "type": "text",
+          "value": "[HTML](#html)"
+        },
+        {
+          "type": "text",
+          "value": "[Image](#image)"
+        },
+        {
+          "type": "text",
+          "value": "[List](#list)"
+        },
+        {
+          "type": "text",
+          "value": "[Newsletter](#newsletter)"
+        },
+        {
+          "type": "text",
+          "value": "[Note](#note)"
+        },
+        {
+          "type": "text",
+          "value": "[Quote](#quote)"
+        },
+        {
+          "type": "text",
+          "value": "[Related](#related)"
+        },
+        {
+          "type": "text",
+          "value": "[Subscribe](#subscribe)"
+        },
+        {
+          "type": "text",
+          "value": "[Timeline](#timeline)"
+        },
+        {
+          "type": "text",
+          "value": "[Video](#video)"
+        }
+      ]
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Ad"
+    },
+    {
+      "type": "text",
+      "value": "We need these to keep the lights on, and we should include these in nearly every story we work on. The only thing we need to specify is the ad tag."
+    },
+    {
+      "type": "text",
+      "value": "The taxonomy for the tags is **phl.section/subsection**, with the subsection being optional. Examples of valid tags are **phl.food** or **phl.news/life**"
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "ad: phl.news/life"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "ad",
+              "value": "phl.news/life"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Combo"
+    },
+    {
+      "type": "text",
+      "value": "A block that allows you to combine two separate blocks and lay them out side-by-side on desktop. (On mobile, the content will be laid out vertically)"
+    },
+    {
+      "type": "group",
+      "value": [
+        {
+          "type": "text",
+          "value": "**Archie:**"
+        },
+        {
+          "type": "pre",
+          "value": {
+            "value": "[.+combo]\n\t{.image}\n\tid: NSK4K3J4SBDBNJF562JF5MEEHE\n\tcaption: A custom caption that roughly matches the same length as the opposing caption\n\t{}\n\n\t{.image}\n\tid: 74OCTQOKVRB7HOMPP2DIXBB7SE\n\tcaption: A custom caption that roughly matches the same length as the opposing caption\n\t{}\n[]"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "**Result:**"
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "image",
+          "value": {
+            "id": "NSK4K3J4SBDBNJF562JF5MEEHE",
+            "srcSet": [
+              {
+                "src": "https://www.inquirer.com/resizer/K95wF4MWXgGtZUtJf9_84OaA5zw=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/NSK4K3J4SBDBNJF562JF5MEEHE.JPG",
+                "size": 325
+              },
+              {
+                "src": "https://www.inquirer.com/resizer/qsT8FnCqI7QGSPbbN4-CiUx8r8w=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/NSK4K3J4SBDBNJF562JF5MEEHE.JPG",
+                "size": 650
+              },
+              {
+                "src": "https://www.inquirer.com/resizer/pH6slNtinA0BxlCunLmxLRd70Dw=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/NSK4K3J4SBDBNJF562JF5MEEHE.JPG",
+                "size": 1300
+              },
+              {
+                "src": "https://www.inquirer.com/resizer/NSuT0nZViDGZrln9_wn9pIuPx-Q=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/NSK4K3J4SBDBNJF562JF5MEEHE.JPG",
+                "size": 2600
+              }
+            ],
+            "caption": "A custom caption that roughly matches the same length as the opposing caption",
+            "credit": "MONICA HERNDON / Staff Photographer"
+          }
+        },
+        {
+          "type": "image",
+          "value": {
+            "id": "74OCTQOKVRB7HOMPP2DIXBB7SE",
+            "srcSet": [
+              {
+                "src": "https://www.inquirer.com/resizer/3_VFXqcECnWwt6h3hjFlpgo550w=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/74OCTQOKVRB7HOMPP2DIXBB7SE.jpg",
+                "size": 325
+              },
+              {
+                "src": "https://www.inquirer.com/resizer/4K1wTNa6jV9cUZEeMSkG_p_Ddo8=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/74OCTQOKVRB7HOMPP2DIXBB7SE.jpg",
+                "size": 650
+              },
+              {
+                "src": "https://www.inquirer.com/resizer/VygU7_hRACn9MIKMdtvHYveYg5A=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/74OCTQOKVRB7HOMPP2DIXBB7SE.jpg",
+                "size": 1300
+              },
+              {
+                "src": "https://www.inquirer.com/resizer/yEKYM6xhX5WdB1CZHsVcaxK0y6o=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/74OCTQOKVRB7HOMPP2DIXBB7SE.jpg",
+                "size": 2600
+              }
+            ],
+            "caption": "A custom caption that roughly matches the same length as the opposing caption",
+            "credit": "Chris McGrath / MCT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Conversation"
+    },
+    {
+      "type": "text",
+      "value": "These can be used for oral history pieces or for illustrating conversations within broader pieces."
+    },
+    {
+      "type": "text",
+      "value": "There are three settings that can customize how **Conversation** blocks look. Every option here is optional.\n\n\u000b**border** can be **conversation**, **square**, or **none**. This determines whether each quote looks like a speech bubble or not."
+    },
+    {
+      "type": "text",
+      "value": "If an **alternating: true** is present, the layout will switch from a single column to one where the avatars swap sides throughout the conversation."
+    },
+    {
+      "type": "text",
+      "value": "**mood** can be **lively** or **somber**; this determines the colours assigned to each person."
+    },
+    {
+      "type": "group",
+      "value": [
+        {
+          "type": "text",
+          "value": "**Archie:**"
+        },
+        {
+          "type": "pre",
+          "value": {
+            "value": "{.conversation}\nborder: conversation\nalternating: true\nmood: lively\n\n[.quotes]\n\tname: Angela Merkel\n\tlabel: Chancellor of Germany\n\timage: https://pmn.arcpublishing.com/photo/FMGWVILCHZDRXAOSFFL7BGAAFI\n\t[.+body]\n\tLorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und diese durcheinander warf um ein Musterbuch zu erstellen.\n\tEs hat nicht nur 5 Jahrhunderte überlebt, sondern auch in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert).\n\t[]\n\n\tname: Vladimir Putin\n\tlabel: President of Russia\n\timage: https://pmn.arcpublishing.com/photo/JVWUH5Z7OFEQ7JTFWBHPAZMY4A\n\t[.+body]\n\tLorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.\n\t[]\n\n\tname: Angela Merkel\n\tlabel: Chancellor of Germany\n\t[.+body]\n\tBekannt wurde es 1960, mit dem erscheinen von \"Letraset\", welches Passagen von Lorem Ipsum enhielt, so wie Desktop Software wie \"Aldus PageMaker\" - ebenfalls mit Lorem Ipsum.\n\t[]\n[]\n{}"
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "value": [
+        {
+          "type": "text",
+          "value": "**Result:**"
+        },
+        {
+          "type": "conversation",
+          "value": {
+            "border": "conversation",
+            "alternating": "true",
+            "mood": "lively",
+            "quotes": [
+              {
+                "name": "Angela Merkel",
+                "label": "Chancellor of Germany",
+                "image": {
+                  "id": "FMGWVILCHZDRXAOSFFL7BGAAFI",
+                  "srcSet": [
+                    {
+                      "src": "https://www.inquirer.com/resizer/85aCNY4qOnJAKG5I-fOw8rU6I3Y=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FMGWVILCHZDRXAOSFFL7BGAAFI.jpg",
+                      "size": 325
+                    },
+                    {
+                      "src": "https://www.inquirer.com/resizer/1rW5Sa6lsSke4I7TSDOwdu6BYk4=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FMGWVILCHZDRXAOSFFL7BGAAFI.jpg",
+                      "size": 650
+                    },
+                    {
+                      "src": "https://www.inquirer.com/resizer/WhJMj4v5v31M6TqJMDkQKuw7kss=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FMGWVILCHZDRXAOSFFL7BGAAFI.jpg",
+                      "size": 1300
+                    },
+                    {
+                      "src": "https://www.inquirer.com/resizer/paNL5m7rsR2udzKHvnthu8Nyxuo=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FMGWVILCHZDRXAOSFFL7BGAAFI.jpg",
+                      "size": 2600
+                    }
+                  ],
+                  "caption": "German Chancellor Angela Merkel feeds Australian lorikeets at Marlow Bird Park in Marlow, Germany, Thursday Sept. 23, 2021. (Georg Wendt/dpa via AP)",
+                  "credit": "Georg Wendt / AP"
+                },
+                "body": [
+                  {
+                    "type": "text",
+                    "value": "Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und diese durcheinander warf um ein Musterbuch zu erstellen."
+                  },
+                  {
+                    "type": "text",
+                    "value": "Es hat nicht nur 5 Jahrhunderte überlebt, sondern auch in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert)."
+                  }
+                ]
+              },
+              {
+                "name": "Vladimir Putin",
+                "label": "President of Russia",
+                "image": {
+                  "id": "JVWUH5Z7OFEQ7JTFWBHPAZMY4A",
+                  "srcSet": [
+                    {
+                      "src": "https://www.inquirer.com/resizer/oQtIWf_6niww5x_VuW-vljtWFQQ=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/JVWUH5Z7OFEQ7JTFWBHPAZMY4A.jpg",
+                      "size": 325
+                    },
+                    {
+                      "src": "https://www.inquirer.com/resizer/qOpqCrtwiJxwFyYt4zw6FiPEx_U=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/JVWUH5Z7OFEQ7JTFWBHPAZMY4A.jpg",
+                      "size": 650
+                    },
+                    {
+                      "src": "https://www.inquirer.com/resizer/EM09F7_UCGQQkQC3W-SwD5wMhSg=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/JVWUH5Z7OFEQ7JTFWBHPAZMY4A.jpg",
+                      "size": 1300
+                    },
+                    {
+                      "src": "https://www.inquirer.com/resizer/5eROUjqSjRpP1hLTimdfrHjNH-o=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/JVWUH5Z7OFEQ7JTFWBHPAZMY4A.jpg",
+                      "size": 2600
+                    }
+                  ],
+                  "caption": "Russian President Vladimir Putin attends a meeting via video conference at the Novo-Ogaryovo residence outside Moscow, Russia, Thursday, Sept. 23, 2021. (Alexei Druzhinin, Sputnik, Kremlin Pool Photo via AP)",
+                  "credit": "Alexei Druzhinin"
+                },
+                "body": [
+                  {
+                    "type": "text",
+                    "value": "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
+                  }
+                ]
+              },
+              {
+                "name": "Angela Merkel",
+                "label": "Chancellor of Germany",
+                "body": [
+                  {
+                    "type": "text",
+                    "value": "Bekannt wurde es 1960, mit dem erscheinen von \"Letraset\", welches Passagen von Lorem Ipsum enhielt, so wie Desktop Software wie \"Aldus PageMaker\" - ebenfalls mit Lorem Ipsum."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Credits"
+    },
+    {
+      "type": "text",
+      "value": "These should exist at the bottom of every story we do. Don’t miss anyone out!"
+    },
+    {
+      "type": "text",
+      "value": ""
+    },
+    {
+      "type": "text",
+      "value": ""
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "[.credits] \n\trole: Designer\n\tnames: TK TK TK\n\n\trole: Reporter\n\tnames: TK TK TK\n\n\trole: Editor\n\tnames: TK TK TK\n[]"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "credits",
+              "value": [
+                {
+                  "role": "Designer",
+                  "names": "TK TK TK"
+                },
+                {
+                  "role": "Reporter",
+                  "names": "TK TK TK"
+                },
+                {
+                  "role": "Editor",
+                  "names": "TK TK TK"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Endmark"
+    },
+    {
+      "type": "text",
+      "value": "For the last paragraph in the story, use this endmark style to communicate to the reader that the story is over."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "endmark: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "endmark",
+              "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Graphic"
+    },
+    {
+      "type": "text",
+      "value": "This block is for embedding published Datawrapper or ai2html charts."
+    },
+    {
+      "type": "text",
+      "value": "The **id** field can take a datawrapper url (https://www.datawrapper.de/_/hsiot/) or a preview url for an ai2html chart (https://media.inquirer.com/storage/inquirer/ai2html/nriaonlinev3/preview.html)."
+    },
+    {
+      "type": "text",
+      "value": "The **height** field is optional. It is used as a fallback to set the iframe height."
+    },
+    {
+      "type": "text",
+      "value": "The **align** field is optional. It can only be **default** or **wide**."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.graphic}\n\tid: https://www.datawrapper.de/_/hsiot/\n\theight: 600\n\talign: wide\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "graphic",
+              "value": {
+                "id": "https://www.datawrapper.de/_/hsiot/",
+                "height": "600"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Heading"
+    },
+    {
+      "type": "text",
+      "value": "For use for subheadings within stories."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "heading: Lorem Ipsum Dolor"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "heading",
+              "value": "Lorem Ipsum Dolor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Hero"
+    },
+    {
+      "type": "text",
+      "value": "These will generally sit at the top of your page as the header. Here you can optionally specific custom colours, fonts, and an image."
+    },
+    {
+      "type": "text",
+      "value": "This block brings in some information from Composer. Headlines are brought in from the print headline field, and the standfirst/kicker/summary is brought in from the subheadline field."
+    },
+    {
+      "type": "text",
+      "value": "The eyebrow (tag above the headline), bylines and timestamp are also brought in from Composer from their regular fields."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "[.+hero]\n\tfont: serif\n\tbackground: pink\n\t{.image}\n\t\tid: FSPGBNW3MRCSXFY32L3FDXPIKA\n\t\tcaption: This caption was overridden by specifying a “caption:” tag in the {.image} block. The next image uses the caption directly from Composer.\n\t{}\n[]"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "hero",
+              "value": [
+                {
+                  "type": "font",
+                  "value": "serif"
+                },
+                {
+                  "type": "background",
+                  "value": "pink"
+                },
+                {
+                  "type": "image",
+                  "value": {
+                    "id": "FSPGBNW3MRCSXFY32L3FDXPIKA",
+                    "srcSet": [
+                      {
+                        "src": "https://www.inquirer.com/resizer/cr5CAeWTvkFJdsrieVPMEhPMCTA=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                        "size": 325
+                      },
+                      {
+                        "src": "https://www.inquirer.com/resizer/ksPjsCuGJNqKJDaBSTzjB_I5Nh0=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                        "size": 650
+                      },
+                      {
+                        "src": "https://www.inquirer.com/resizer/LooRMhKVH25xWc1t-b0ijUJ5aUc=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                        "size": 1300
+                      },
+                      {
+                        "src": "https://www.inquirer.com/resizer/p37dy-xwxPYjgGDJX-HJT6TJqzQ=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                        "size": 2600
+                      }
+                    ],
+                    "caption": "This caption was overridden by specifying a “caption:” tag in the {.image} block. The next image uses the caption directly from Composer.",
+                    "credit": "John Locher"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "The Hero block can be styled a variety of ways. For **font**, you can choose **display**, **condensed**, **serif**, or **poster**."
+    },
+    {
+      "type": "text",
+      "value": "For **background**, you can choose **white**, **navy**, **pink**, **orange**, **yellow**, **green**, **periwinkle**, **cyan**, and **black**."
+    },
+    {
+      "type": "text",
+      "value": "Here are a few combinations to inspire you:"
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**font: serif**, **background: cyan**"
+            },
+            {
+              "type": "hero",
+              "value": [
+                {
+                  "type": "font",
+                  "value": "serif"
+                },
+                {
+                  "type": "background",
+                  "value": "cyan"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**font: poster**, **background: orange**"
+            },
+            {
+              "type": "hero",
+              "value": [
+                {
+                  "type": "font",
+                  "value": "poster"
+                },
+                {
+                  "type": "background",
+                  "value": "orange"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**font: condensed**, **background: green**"
+            },
+            {
+              "type": "hero",
+              "value": [
+                {
+                  "type": "font",
+                  "value": "condensed"
+                },
+                {
+                  "type": "background",
+                  "value": "green"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**font: display**, **background: navy**"
+            },
+            {
+              "type": "hero",
+              "value": [
+                {
+                  "type": "font",
+                  "value": "display"
+                },
+                {
+                  "type": "background",
+                  "value": "navy"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "HTML"
+    },
+    {
+      "type": "text",
+      "value": "This block lets you embed any HTML file. The HTML is hosted on GitHub Gist, which is a tool that allows you to create and share chunks of code. You’ll need a GitHub account to create these. Gists can be either public or secret. The **id** field should use the url from the Gist you create."
+    },
+    {
+      "type": "text",
+      "value": "You can also add an **align** field that determines size and position. This works in the same way that the [Image](#image) block does with **left, right,** and **wide** as options."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.html}\t\n\tid: https://gist.github.com/sammorrisdesign/64b8c20cb5059584ee7772d76fcc581a\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "html",
+              "value": {
+                "id": "https://gist.github.com/sammorrisdesign/64b8c20cb5059584ee7772d76fcc581a",
+                "code": "<style>\n  .editorial-note-embed {\n    background: #FFFFFF;\n    box-sizing: border-box;\n    box-shadow: 2px 0 12px 0 #DCDCDC;\n    padding: 20px;\n    margin: 30px 0;\n  }\n\n  .note-header-outer {\n    margin-bottom: 5px;\n  }\n\n  .note-header-text {\n    font-weight: 500;\n    font-size: 22px;\n    color: #000000;\n    letter-spacing: 0;\n    line-height: 37px;\n    display: inline-block;\n    position: relative;\n    z-index: 1;\n  }\n\n  .note-underline {\n    position: absolute;\n    left: -5px;\n    right: -5px;\n    bottom: 6px;\n    height: 10px;\n    background: #FFCC55;\n    z-index: -1;\n  }\n\n  .note-text-expand {\n    transition: height 0.5s;\n  }\n\n  .note-text-inner {\n    font-size: 16px;\n    color: #89848B;\n    line-height: 21px;\n  }\n\n  .note-text-inner .note-text {\n    font-size: 14px;\n    color: #89848B;\n    line-height: 1.5;\n    margin-bottom: 10px;\n  }\n\n  .button-section {\n    margin-top: 10px;\n    text-align: center;\n    width: 100%;\n    position: relative;\n  }\n\n  .note-text-exand-overlay {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: -50px;\n    height: 40px;\n    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);\n  }\n\n  .is-clicked .note-text-exand-overlay {\n    background-image: none;\n  }\n\n  .input-button {\n    padding: 12px 18px;\n    border-radius: 21px;\n    text-transform: uppercase;\n    font-size: 12px;\n    color: #16183A;\n    letter-spacing: 0.97px;\n    border: 1px solid #16183A;\n    background: white;\n    margin: auto;\n    cursor: pointer;\n  }\n</style>\n<div class=\"editorial-note-embed\" id=\"editorial-note\">\n  <div class=\"editorial-note-embed-text\">\n    <div class=\"note-header-outer\">\n      <div class=\"note-header-text\">Opinion\n        <div class=\"note-underline\"></div>\n      </div>\n    </div>\n    <div class=\"note-text-expand\" id=\"expand-item\">\n      <div class=\"note-text-inner\">\n        <div class=\"note-text\">\n          The Inquirer strives to present a diverse range of views from a wide variety of writers on our opinion\n          platforms. Our goal is to elevate civic — and civil — discourse. An op-ed, like this piece, is an opinion\n          written by someone outside our newsroom.\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "value": "Image"
+    },
+    {
+      "type": "text",
+      "value": "This block lets you include an image from Photo Center. The image has to be “published” before it will show up on the page. You can use the image’s id or full url for the **id** field."
+    },
+    {
+      "type": "text",
+      "value": "By default, we pull **caption** and **credit** fields directly from Photo Center; you can override either of them by specifying them in the Archie block."
+    },
+    {
+      "type": "text",
+      "value": "There is also an **align** field that determines size and position. Detailed below."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.image}\t\n\tid: FSPGBNW3MRCSXFY32L3FDXPIKA\n\tcaption: This caption was overridden by specifying a “caption:” tag in the {.image} block. If this isn’t set, the image will use the caption directly from Photo Center.\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "image",
+              "value": {
+                "id": "FSPGBNW3MRCSXFY32L3FDXPIKA",
+                "srcSet": [
+                  {
+                    "src": "https://www.inquirer.com/resizer/cr5CAeWTvkFJdsrieVPMEhPMCTA=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                    "size": 325
+                  },
+                  {
+                    "src": "https://www.inquirer.com/resizer/ksPjsCuGJNqKJDaBSTzjB_I5Nh0=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                    "size": 650
+                  },
+                  {
+                    "src": "https://www.inquirer.com/resizer/LooRMhKVH25xWc1t-b0ijUJ5aUc=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                    "size": 1300
+                  },
+                  {
+                    "src": "https://www.inquirer.com/resizer/p37dy-xwxPYjgGDJX-HJT6TJqzQ=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+                    "size": 2600
+                  }
+                ],
+                "caption": "This caption was overridden by specifying a “caption:” tag in the {.image} block. If this isn’t set, the image will use the caption directly from Photo Center.",
+                "credit": "John Locher"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "Use the optional **align:** tag to change how images are displayed. Setting **align: wide** makes an image wider than the text:"
+    },
+    {
+      "type": "pre",
+      "value": {
+        "value": "{.image}\n\tid: FSPGBNW3MRCSXFY32L3FDXPIKA\n\talign: wide\n\tcaption: This image has been set to a wide presentation using “align: wide.”\n{}"
+      }
+    },
+    {
+      "type": "image",
+      "value": {
+        "id": "FSPGBNW3MRCSXFY32L3FDXPIKA",
+        "srcSet": [
+          {
+            "src": "https://www.inquirer.com/resizer/cr5CAeWTvkFJdsrieVPMEhPMCTA=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 325
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/ksPjsCuGJNqKJDaBSTzjB_I5Nh0=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 650
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/LooRMhKVH25xWc1t-b0ijUJ5aUc=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 1300
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/p37dy-xwxPYjgGDJX-HJT6TJqzQ=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 2600
+          }
+        ],
+        "caption": "This image has been set to a wide presentation using “align: wide.”",
+        "credit": "John Locher",
+        "align": "wide"
+      }
+    },
+    {
+      "type": "text",
+      "value": "Setting **align: full** makes an image the full size of the screen:"
+    },
+    {
+      "type": "pre",
+      "value": {
+        "value": "{.image}\n\tid: FSPGBNW3MRCSXFY32L3FDXPIKA\n\talign: full\n\tcaption: This image has been set to a full-width presentation using “align: full.”\n{}"
+      }
+    },
+    {
+      "type": "image",
+      "value": {
+        "id": "FSPGBNW3MRCSXFY32L3FDXPIKA",
+        "srcSet": [
+          {
+            "src": "https://www.inquirer.com/resizer/cr5CAeWTvkFJdsrieVPMEhPMCTA=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 325
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/ksPjsCuGJNqKJDaBSTzjB_I5Nh0=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 650
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/LooRMhKVH25xWc1t-b0ijUJ5aUc=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 1300
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/p37dy-xwxPYjgGDJX-HJT6TJqzQ=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 2600
+          }
+        ],
+        "caption": "This image has been set to a full-width presentation using “align: full.”",
+        "credit": "John Locher",
+        "align": "full"
+      }
+    },
+    {
+      "type": "text",
+      "value": ""
+    },
+    {
+      "type": "text",
+      "value": ""
+    },
+    {
+      "type": "text",
+      "value": "Setting **align: left** or **align: right** floats an image in the text:"
+    },
+    {
+      "type": "pre",
+      "value": {
+        "value": "{.image}\n\tid: FSPGBNW3MRCSXFY32L3FDXPIKA\n\talign: left\n\tcaption: This image has been floated to the left using “align: left.”\n{}"
+      }
+    },
+    {
+      "type": "image",
+      "value": {
+        "id": "FSPGBNW3MRCSXFY32L3FDXPIKA",
+        "srcSet": [
+          {
+            "src": "https://www.inquirer.com/resizer/cr5CAeWTvkFJdsrieVPMEhPMCTA=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 325
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/ksPjsCuGJNqKJDaBSTzjB_I5Nh0=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 650
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/LooRMhKVH25xWc1t-b0ijUJ5aUc=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 1300
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/p37dy-xwxPYjgGDJX-HJT6TJqzQ=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 2600
+          }
+        ],
+        "caption": "This image has been floated to the left using “align: left.”",
+        "credit": "John Locher",
+        "align": "left"
+      }
+    },
+    {
+      "type": "text",
+      "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "type": "pre",
+      "value": {
+        "value": "{.image}\n\tid: FSPGBNW3MRCSXFY32L3FDXPIKA\n\talign: right\n\tcaption: This image has been floated to the right using “align: right.”\n{}"
+      }
+    },
+    {
+      "type": "image",
+      "value": {
+        "id": "FSPGBNW3MRCSXFY32L3FDXPIKA",
+        "srcSet": [
+          {
+            "src": "https://www.inquirer.com/resizer/cr5CAeWTvkFJdsrieVPMEhPMCTA=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 325
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/ksPjsCuGJNqKJDaBSTzjB_I5Nh0=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 650
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/LooRMhKVH25xWc1t-b0ijUJ5aUc=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 1300
+          },
+          {
+            "src": "https://www.inquirer.com/resizer/p37dy-xwxPYjgGDJX-HJT6TJqzQ=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/FSPGBNW3MRCSXFY32L3FDXPIKA.jpg",
+            "size": 2600
+          }
+        ],
+        "caption": "This image has been floated to the right using “align: right.”",
+        "credit": "John Locher",
+        "align": "right"
+      }
+    },
+    {
+      "type": "text",
+      "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "List"
+    },
+    {
+      "type": "text",
+      "value": "A bullet pointed list. Each item in the list should be its own paragraph within Google Docs"
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "[.+list]\n\tLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\n\tLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\t\n\tLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n[]"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "list",
+              "value": [
+                {
+                  "type": "text",
+                  "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                },
+                {
+                  "type": "text",
+                  "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                },
+                {
+                  "type": "text",
+                  "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Newsletter"
+    },
+    {
+      "type": "text",
+      "value": "If appropriate, we can embed a newsletter sign-up box within the article."
+    },
+    {
+      "type": "text",
+      "value": "The **id** comes from [this list](https://inquirer.atlassian.net/wiki/spaces/PD/pages/1723990940/Pre-2021+Newsletter+Archive+Newsletter+Lists)."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.newsletter}\n\tid: 3582e11a4a2bf30ffa4f63a4c9e0c599\n\ttitle: Let’s Eat, Philly!\n\tdescription: Looking for new restaurants, food news, and the best ways to eat in Philadelphia? Every Wednesday, The Inquirer’s Mike Klein dishes the latest on Philly’s food scene.\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "newsletter",
+              "value": {
+                "id": "3582e11a4a2bf30ffa4f63a4c9e0c599",
+                "title": "Let’s Eat, Philly!",
+                "description": "Looking for new restaurants, food news, and the best ways to eat in Philadelphia? Every Wednesday, The Inquirer’s Mike Klein dishes the latest on Philly’s food scene."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Note"
+    },
+    {
+      "type": "text",
+      "value": "A block mainly used for adding methodologies to the bottom of data stories. However, it can be used for any piece of footnote style copy."
+    },
+    {
+      "type": "text",
+      "value": "It can take any other type of block, however it is mainly designed for an optional **header** and blocks of text."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "[.+note]\n\theading: Methodology\n\tThe Inquirer’s analysis compares Bryce Harper with all 655 non-active players who have reached 5,000 plate appearances since integration in 1947 using a slight variation of Bill James’ similarity scores.\n\tAs James has noted, this method isn’t perfect: “Similarity scores are a method of asking, imperfectly but at least objectively, whether two players are truly similar, or whether the distance between them is considerable.”\n[]"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "note",
+              "value": [
+                {
+                  "type": "heading",
+                  "value": "Methodology"
+                },
+                {
+                  "type": "text",
+                  "value": "The Inquirer’s analysis compares Bryce Harper with all 655 non-active players who have reached 5,000 plate appearances since integration in 1947 using a slight variation of Bill James’ [similarity scores](https://www.baseball-reference.com/about/similarity.shtml)."
+                },
+                {
+                  "type": "text",
+                  "value": "As James has [noted](https://community.fangraphs.com/an-exercise-in-generating-similarity-scores/), this method isn’t perfect: “Similarity scores are a method of asking, imperfectly but at least objectively, whether two players are truly similar, or whether the distance between them is considerable.”"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Quote"
+    },
+    {
+      "type": "text",
+      "value": "Use a Quote block to add pull-quotes."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.quote}\n\ttext: All I ask is the chance to prove that money can’t make me happy\n\tcredit: Spike Milligan\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "quote",
+              "value": {
+                "text": "All I ask is the chance to prove that money can’t make me happy",
+                "credit": "Spike Milligan"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "Setting **align: left** or **align: right** floats a quote in the text:"
+    },
+    {
+      "type": "pre",
+      "value": {
+        "value": "{.quote}\n\ttext: All I ask is the chance to prove that money can’t make me happy\n\talign: left\n\tcredit: Spike Milligan\n{}"
+      }
+    },
+    {
+      "type": "quote",
+      "value": {
+        "text": "All I ask is the chance to prove that money can’t make me happy",
+        "align": "left",
+        "credit": "Spike Milligan"
+      }
+    },
+    {
+      "type": "text",
+      "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "type": "pre",
+      "value": {
+        "value": "{.quote}\n\ttext: All I ask is the chance to prove that money can’t make me happy\n\talign: right\n\tcredit: Spike Milligan\n{}"
+      }
+    },
+    {
+      "type": "quote",
+      "value": {
+        "text": "All I ask is the chance to prove that money can’t make me happy",
+        "align": "right",
+        "credit": "Spike Milligan"
+      }
+    },
+    {
+      "type": "text",
+      "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "heading",
+      "value": "Related"
+    },
+    {
+      "type": "text",
+      "value": "Link to related stories that have been published by providing the composer url as an **id**."
+    },
+    {
+      "type": "text",
+      "value": "These should almost always be aligned left or right."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.related}\n\tid: https://pmn.arcpublishing.com/composer/edit/H7ZWJIGJDBEZPBBRROWXABAC5M/\n\talign: left\n\teyebrow: More From This Series\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "related",
+              "value": {
+                "id": "https://pmn.arcpublishing.com/composer/edit/LQKNVPW6VNFY5KRL6DKHZVAOLM/",
+                "eyebrow": "More From This Series",
+                "align": "left",
+                "headlines": {
+                  "basic": "A love letter to Black Philly | Wildest Dreams",
+                  "meta_title": "We created this space to center ourselves, and put our truths out there, on our own terms.",
+                  "mobile": "",
+                  "native": "",
+                  "print": "A love letter to Black Philadelphia",
+                  "tablet": "",
+                  "web": "Welcome to ‘Wildest Dreams,’ a love letter to Black Philadelphia"
+                },
+                "publish_date": "2021-11-01T18:06:52.744Z",
+                "promo_items": {
+                  "basic": {
+                    "_id": "WD62JL7E4RDR7BEBA2IKMAQWV4",
+                    "additional_properties": {
+                      "fullSizeResizeUrl": "/resizer/4xjmP0Xd1qh93AKsNAluNvE_wpU=/arc-anglerfish-arc2-prod-pmn/public/WD62JL7E4RDR7BEBA2IKMAQWV4.jpg",
+                      "galleries": [
+                        {
+                          "headlines": {
+                            "basic": "FortheKids Juneteenth costume march"
+                          },
+                          "_id": "JQ3IP7UMVBA2ZOXLBBUHNCQEGQ"
+                        }
+                      ],
+                      "mime_type": "image/jpeg",
+                      "originalName": "KIDS27-E.JPG",
+                      "originalUrl": "https://cloudfront-us-east-1.images.arcpublishing.com/pmn/WD62JL7E4RDR7BEBA2IKMAQWV4.jpg",
+                      "proxyUrl": "/resizer/4xjmP0Xd1qh93AKsNAluNvE_wpU=/arc-anglerfish-arc2-prod-pmn/public/WD62JL7E4RDR7BEBA2IKMAQWV4.jpg",
+                      "published": true,
+                      "resizeUrl": "/resizer/4xjmP0Xd1qh93AKsNAluNvE_wpU=/arc-anglerfish-arc2-prod-pmn/public/WD62JL7E4RDR7BEBA2IKMAQWV4.jpg",
+                      "restricted": false,
+                      "takenOn": "2001-01-01T01:04:45Z",
+                      "thumbnailResizeUrl": "/resizer/xZMT5QvTsncOZCnfv__jxK3-ipM=/300x0/arc-anglerfish-arc2-prod-pmn/public/WD62JL7E4RDR7BEBA2IKMAQWV4.jpg",
+                      "version": 1,
+                      "visible_to_search": true,
+                      "adapter_version": "0.7.0",
+                      "expiry": "never"
+                    },
+                    "caption": "Jonathan Delgado (left) and Rosa Sanchez dance to the music of Bombero De La Calle at a Juneteenth celebration in 2020.",
+                    "created_date": "2020-06-27T00:45:01Z",
+                    "credits": {
+                      "by": [
+                        {
+                          "name": "CHARLES FOX / Staff Photographer",
+                          "type": "author"
+                        }
+                      ]
+                    },
+                    "distributor": {
+                      "category": "staff",
+                      "mode": "custom",
+                      "name": "staff"
+                    },
+                    "height": 2000,
+                    "last_updated_date": "2020-06-27T02:29:51Z",
+                    "licensable": false,
+                    "owner": {
+                      "id": "pmn",
+                      "sponsored": false
+                    },
+                    "source": {
+                      "name": "Staff",
+                      "source_id": "2193662",
+                      "source_type": "Staff or Freelance",
+                      "additional_properties": {
+                        "content_type": "betadam_image",
+                        "editor": "photo center"
+                      },
+                      "system": "betadam"
+                    },
+                    "subtitle": "KIDS27",
+                    "type": "image",
+                    "url": "https://cloudfront-us-east-1.images.arcpublishing.com/pmn/WD62JL7E4RDR7BEBA2IKMAQWV4.jpg",
+                    "version": "0.10.3",
+                    "width": 3000,
+                    "syndication": {
+                      "external_distribution": true,
+                      "search": true
+                    },
+                    "publish_date": "2001-01-01T01:04:45.000Z"
+                  },
+                  "longform": {
+                    "_id": "55WXFPEGDZGWHAMH5ETRQMKEAE",
+                    "additional_properties": {
+                      "fullSizeResizeUrl": "/resizer/a3ANrpeQwW2hhUwhw5C3KPnOliM=/arc-anglerfish-arc2-prod-pmn/public/55WXFPEGDZGWHAMH5ETRQMKEAE.JPG",
+                      "galleries": [],
+                      "keywords": [],
+                      "mime_type": "image/jpeg",
+                      "originalName": "KIDS27-E.JPG",
+                      "originalUrl": "https://cloudfront-us-east-1.images.arcpublishing.com/pmn/55WXFPEGDZGWHAMH5ETRQMKEAE.JPG",
+                      "proxyUrl": "/resizer/a3ANrpeQwW2hhUwhw5C3KPnOliM=/arc-anglerfish-arc2-prod-pmn/public/55WXFPEGDZGWHAMH5ETRQMKEAE.JPG",
+                      "published": true,
+                      "resizeUrl": "/resizer/a3ANrpeQwW2hhUwhw5C3KPnOliM=/arc-anglerfish-arc2-prod-pmn/public/55WXFPEGDZGWHAMH5ETRQMKEAE.JPG",
+                      "restricted": false,
+                      "takenOn": "2001-01-01T01:04:45Z",
+                      "thumbnailResizeUrl": "/resizer/1U21CwJJAielIfZfqOB9gbYfeSg=/300x0/arc-anglerfish-arc2-prod-pmn/public/55WXFPEGDZGWHAMH5ETRQMKEAE.JPG",
+                      "version": 2,
+                      "visible_to_search": true,
+                      "adapter_version": "0.7.0",
+                      "expiry": "never"
+                    },
+                    "address": {},
+                    "caption": "Jonathan Delgado (left) and Rosa Sanchez dance to the music of Bombero De La Calle at a Juneteenth celebration in 2020.",
+                    "created_date": "2021-09-15T13:10:16Z",
+                    "credits": {
+                      "by": [
+                        {
+                          "name": "CHARLES FOX / Staff Photographer",
+                          "type": "author"
+                        }
+                      ]
+                    },
+                    "distributor": {
+                      "category": "staff",
+                      "mode": "custom",
+                      "name": "staff"
+                    },
+                    "geo": {},
+                    "height": 2000,
+                    "image_type": "photograph",
+                    "last_updated_date": "2021-09-15T13:11:12Z",
+                    "licensable": false,
+                    "owner": {
+                      "id": "pmn",
+                      "sponsored": false
+                    },
+                    "related_content": {
+                      "derivative_of": [
+                        {
+                          "referent": {
+                            "id": "WD62JL7E4RDR7BEBA2IKMAQWV4",
+                            "type": "image"
+                          },
+                          "type": "reference"
+                        }
+                      ]
+                    },
+                    "source": {
+                      "name": "Staff",
+                      "source_id": "2193662",
+                      "source_type": "staff",
+                      "additional_properties": {
+                        "content_type": "betadam_image",
+                        "editor": "photo center"
+                      },
+                      "system": "betadam"
+                    },
+                    "subtitle": "KIDS27",
+                    "taxonomy": {
+                      "associated_tasks": []
+                    },
+                    "type": "image",
+                    "url": "https://cloudfront-us-east-1.images.arcpublishing.com/pmn/55WXFPEGDZGWHAMH5ETRQMKEAE.JPG",
+                    "version": "0.10.3",
+                    "width": 2000,
+                    "syndication": {
+                      "external_distribution": true,
+                      "search": true
+                    },
+                    "publish_date": "2001-01-01T01:04:45.000Z"
+                  },
+                  "youtube": {
+                    "_id": "BMMW65NQXJDZNMKRZWJX4AMRBE",
+                    "content": "https://youtu.be/_uo3-iYbImk",
+                    "type": "raw_html"
+                  }
+                },
+                "credits": {
+                  "by": [
+                    {
+                      "_id": "hardnett_raishad",
+                      "type": "author",
+                      "version": "0.5.8",
+                      "name": "Raishad Hardnett",
+                      "image": {
+                        "url": "https://s3.amazonaws.com/arc-authors/pmn/08693365-d440-4a91-b51b-aa5c6286023a.png",
+                        "version": "0.5.8"
+                      },
+                      "description": "As a videographer and video editor, I have a heart for filmmaking that explores community, legacy, and culture. ",
+                      "url": "https://www.inquirer.com/author/hardnett_raishad/",
+                      "social_links": [
+                        {
+                          "site": "email",
+                          "url": "rhardnett@inquirer.com"
+                        }
+                      ],
+                      "socialLinks": [
+                        {
+                          "site": "email",
+                          "url": "rhardnett@inquirer.com",
+                          "deprecated": true,
+                          "deprecation_msg": "Please use social_links."
+                        }
+                      ],
+                      "additional_properties": {
+                        "original": {
+                          "_id": "hardnett_raishad",
+                          "type": "author",
+                          "byline": "Raishad Hardnett",
+                          "firstName": "Raishad",
+                          "lastName": "Hardnett",
+                          "org": "pmn",
+                          "source_id": "495183001",
+                          "role": "Video editor ",
+                          "email": "rhardnett@inquirer.com",
+                          "source": {
+                            "source_id": "495183001",
+                            "additional_properties": {
+                              "content_type": "Author"
+                            }
+                          },
+                          "adapter_version": "0.1.1",
+                          "books": [],
+                          "podcasts": [],
+                          "education": [],
+                          "awards": [],
+                          "last_updated_date": "2021-02-16T19:39:20.909Z",
+                          "bio_page": "https://www.inquirer.com/author/hardnett_raishad/",
+                          "image": "https://s3.amazonaws.com/arc-authors/pmn/08693365-d440-4a91-b51b-aa5c6286023a.png",
+                          "bio": "As a videographer and video editor, I have a heart for filmmaking that explores community, legacy, and culture. "
+                        }
+                      }
+                    }
+                  ]
+                },
+                "description": {
+                  "basic": "We created this space to center ourselves — our mental health, our beauty and our identities — and to put our truths out there, on our own terms."
+                },
+                "website_url": "/life/inq2/wildest-dreams-intro-20210915.html"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "divider",
+      "value": ""
+    },
+    {
+      "type": "heading",
+      "value": "Subscribe"
+    },
+    {
+      "type": "text",
+      "value": "If appropriate, we can embed a Subscription-ask within the article. These are hidden for users that are already subscribed. The theme of this box comes from the Hero’s **background** and **font** values."
+    },
+    {
+      "type": "text",
+      "value": "The **title** and **description** is optional. If not added, you’ll see generic copy. It’s best to use the generic copy unless we want our subscription box to speak directly to the article’s topic and/or content."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.subscribe}\n\ttitle: Subscribe to The Philadelphia Inquirer\n\tdescription: Our reporting is directly supported by reader subscriptions. If you want more accountability journalism like this story, please subscribe today\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "subscribe",
+              "value": {
+                "title": "Subscribe to The Philadelphia Inquirer",
+                "description": "Our reporting is directly supported by reader subscriptions. If you want more accountability journalism like this story, please subscribe today"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "heading",
+      "value": "Timeline"
+    },
+    {
+      "type": "text",
+      "value": "An interactive timeline built up of blocks that start with a **date**."
+    },
+    {
+      "type": "text",
+      "value": "The **body** field can contain any other block (within reason). For instance, the first timeline entry below has an **image** inside it."
+    },
+    {
+      "type": "group",
+      "value": [
+        {
+          "type": "text",
+          "value": "**Archie:**"
+        },
+        {
+          "type": "pre",
+          "value": {
+            "value": "[.timeline]\n\tdate: Date goes here\n\ttitle: Title goes here\n\t[.+body]\n\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra. Commodo viverra maecenas accumsan lacus vel. \n\tQuisque egestas diam in arcu cursus euismod quis. Interdum posuere lorem ipsum dolor sit. Nisl rhoncus mattis rhoncus urna. Ornare arcu odio ut sem nulla pharetra diam sit. Semper quis lectus nulla at volutpat \tdiam. Fermentum odio eu feugiat pretium. Adipiscing elit duis tristique sollicitudin. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. \n\t{.image}\n\tid: https://pmn.arcpublishing.com/photo/UCHYOI5OIBB6HHZ4DA6TTO7VBA\n\tcaption:  Archbishop Anthony Bevilacqua in 1989.\n\t{}\n\t[]\n\n\tdate: Date goes here\n\ttitle: Title goes here\n\t[.+body]\n\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra. Commodo viverra maecenas accumsan lacus vel. Quisque egestas diam in arcu cursus euismod quis. Interdum posuere lorem ipsum dolor sit. \n\tNisl rhoncus mattis rhoncus urna. Ornare arcu odio ut sem nulla pharetra diam sit. Semper quis lectus nulla at volutpat diam. Fermentum odio eu feugiat pretium. Adipiscing elit duis tristique sollicitudin. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Sem et tortor consequat id porta. Nec feugiat in fermentum posuere. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.\n\t[]\n[]"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "**Result:**"
+    },
+    {
+      "type": "timeline",
+      "value": [
+        {
+          "date": "Date goes here",
+          "title": "Title goes here",
+          "body": [
+            {
+              "type": "text",
+              "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra. Commodo viverra maecenas accumsan lacus vel."
+            },
+            {
+              "type": "text",
+              "value": "Quisque egestas diam in arcu cursus euismod quis. Interdum posuere lorem ipsum dolor sit. Nisl rhoncus mattis rhoncus urna. Ornare arcu odio ut sem nulla pharetra diam sit. Semper quis lectus nulla at volutpat diam. Fermentum odio eu feugiat pretium. Adipiscing elit duis tristique sollicitudin. Ultrices neque ornare aenean euismod elementum nisi quis eleifend."
+            },
+            {
+              "type": "text",
+              "value": "Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Sem et tortor consequat id porta. Nec feugiat in fermentum posuere. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus."
+            },
+            {
+              "type": "image",
+              "value": {
+                "id": "UCHYOI5OIBB6HHZ4DA6TTO7VBA",
+                "srcSet": [
+                  {
+                    "src": "https://www.inquirer.com/resizer/mCDCqeAxanQrZUknzBINlMeNqY8=/325x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/UCHYOI5OIBB6HHZ4DA6TTO7VBA.jpg",
+                    "size": 325
+                  },
+                  {
+                    "src": "https://www.inquirer.com/resizer/hordviPJcSFoTQrv4fRuoZHR0Q0=/650x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/UCHYOI5OIBB6HHZ4DA6TTO7VBA.jpg",
+                    "size": 650
+                  },
+                  {
+                    "src": "https://www.inquirer.com/resizer/Opr0aHDFBj2L2249pgO87qlNLEg=/1300x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/UCHYOI5OIBB6HHZ4DA6TTO7VBA.jpg",
+                    "size": 1300
+                  },
+                  {
+                    "src": "https://www.inquirer.com/resizer/hr7x6aruSfeWOn8dCpp5T5IBCAQ=/2600x0/cloudfront-us-east-1.images.arcpublishing.com/pmn/UCHYOI5OIBB6HHZ4DA6TTO7VBA.jpg",
+                    "size": 2600
+                  }
+                ],
+                "caption": "Archbishop Anthony Bevilacqua in 1989.",
+                "credit": "Matt Rourke / AP"
+              }
+            }
+          ]
+        },
+        {
+          "date": "Date goes here",
+          "title": "Title goes here",
+          "body": [
+            {
+              "type": "text",
+              "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra. Commodo viverra maecenas accumsan lacus vel. Quisque egestas diam in arcu cursus euismod quis. Interdum posuere lorem ipsum dolor sit."
+            },
+            {
+              "type": "text",
+              "value": "Nisl rhoncus mattis rhoncus urna. Ornare arcu odio ut sem nulla pharetra diam sit. Semper quis lectus nulla at volutpat diam. Fermentum odio eu feugiat pretium. Adipiscing elit duis tristique sollicitudin. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Sem et tortor consequat id porta. Nec feugiat in fermentum posuere. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    },
+    {
+      "type": "heading",
+      "value": "Video"
+    },
+    {
+      "type": "text",
+      "value": "Include a published video from Video Center. You can find the **id** as a UUID on the “Video Summary” of any Video Center video."
+    },
+    {
+      "type": "combo",
+      "value": [
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Archie:**"
+            },
+            {
+              "type": "pre",
+              "value": {
+                "value": "{.video}\n\tid: de479e61-7328-48b3-b5d2-b94444826253\n{}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "value": [
+            {
+              "type": "text",
+              "value": "**Result:**"
+            },
+            {
+              "type": "video",
+              "value": {
+                "id": "de479e61-7328-48b3-b5d2-b94444826253",
+                "streams": [
+                  {
+                    "height": 180,
+                    "width": 320,
+                    "filesize": 11776132,
+                    "stream_type": "ts",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/mobile.m3u8",
+                    "bitrate": 160,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 360,
+                    "width": 640,
+                    "filesize": 16428944,
+                    "stream_type": "ts",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/mobile.m3u8",
+                    "bitrate": 300,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 360,
+                    "width": 640,
+                    "filesize": 26158508,
+                    "stream_type": "ts",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/mobile.m3u8",
+                    "bitrate": 600,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 480,
+                    "width": 854,
+                    "filesize": 45748860,
+                    "stream_type": "ts",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/master.m3u8",
+                    "bitrate": 1200,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 1080,
+                    "width": 1920,
+                    "filesize": 153956396,
+                    "stream_type": "ts",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/hd.m3u8",
+                    "bitrate": 4500,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 1080,
+                    "width": 1920,
+                    "filesize": 178289800,
+                    "stream_type": "ts",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/hlsv4_master.m3u8",
+                    "bitrate": 5400,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 180,
+                    "width": 320,
+                    "filesize": 9425129,
+                    "stream_type": "mp4",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/file_320x180-160-v3.mp4",
+                    "bitrate": 160,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 360,
+                    "width": 640,
+                    "filesize": 23494956,
+                    "stream_type": "mp4",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/file_640x360-600-v3.mp4",
+                    "bitrate": 600,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 480,
+                    "width": 854,
+                    "filesize": 42611547,
+                    "stream_type": "mp4",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/file_854x480-1200-v3_1.mp4",
+                    "bitrate": 1200,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 720,
+                    "width": 1280,
+                    "filesize": 68287017,
+                    "stream_type": "mp4",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/file_1280x720-2000-v3_1.mp4",
+                    "bitrate": 2000,
+                    "provider": "mediaconvert"
+                  },
+                  {
+                    "height": 1080,
+                    "width": 1920,
+                    "filesize": 176948714,
+                    "stream_type": "mp4",
+                    "url": "https://d36wdq4x3t6ywe.cloudfront.net/wp-pmn/Kristen_Balderas_Staff/20210915/614249884cedfd000102ca9d/t_db203decd38d417a86af2f076eee920b_name_Pastelillos_2/file_1920x1080-5400-v4.mp4",
+                    "bitrate": 5400,
+                    "provider": "mediaconvert"
+                  }
+                ],
+                "credit": "Kristen Balderas",
+                "poster": "https://www.inquirer.com/resizer/Q0igl84orbKb87-khPRbc2AiJpk=/650x0/d1dazej9q2gz23.cloudfront.net/09-15-2021/t_f033be198ba94252bc1cb5cdd43398d7_name_Thumbnail.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "[Back to top](#)"
+    }
+  ]
+}

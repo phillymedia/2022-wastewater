@@ -1,0 +1,29 @@
+{
+  "_id": "26K7UIYIUVBL3ACWTT6RZ4A26E",
+  "last_updated_date": "2021-12-07T14:42:14.855Z",
+  "display_date": "2021-10-21T14:31:19.717Z",
+  "credits": {
+    "by": [
+      {
+        "byline": "Test Author",
+        "name": "Test Author",
+        "org": "Test Organization",
+        "type": "author",
+        "version": "0.10.7"
+      }
+    ]
+  },
+  "label": {},
+  "headlines": {
+    "basic": "Documentation for All Archie Components",
+    "meta_title": "",
+    "mobile": "",
+    "native": "",
+    "print": "The Archie Block Roundup",
+    "tablet": "",
+    "web": ""
+  },
+  "subheadlines": {
+    "basic": "If you need help figuring out how to build your templated interactive, you’ve come to the right place."
+  }
+}
