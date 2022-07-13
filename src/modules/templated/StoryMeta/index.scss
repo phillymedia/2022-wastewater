@@ -12,16 +12,16 @@
 }
 
 .inno-story-meta__timestamp-date {
-  color: var(--theme-color-text-primary);
+  color: $color-base-dark-gray;
 }
 
 .inno-story-meta__timestamp-label {
-  color: var(--theme-color-text-secondary);
+  color: $color-base-mid-gray;
 }
 
 // Author
 .inno-story-meta__authors {
-  color: var(--theme-color-text-primary, $color-base-navy);
+  color: $color-base-navy;
   font-size: $size-font-sm;
   font-family: $font-style-base;
   line-height: 1.5em;
@@ -29,11 +29,11 @@
 }
 
 .inno-story-meta__author-link {
-  color: var(--theme-color-text-primary, $color-base-navy);;
+  color: $color-base-navy;
   text-decoration: none;
   transition: color 0.4s ease-in-out;
 
   &:hover {
-    color: var(--theme-color-text-link, $color-base-blue);
+    color: $color-base-blue;
   }
 }

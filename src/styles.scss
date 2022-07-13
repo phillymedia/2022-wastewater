@@ -2,14 +2,38 @@
 @import "../node_modules/sass-mq/mq";
 @import "./tokens";
 
-// Used templated modules
-@import "./modules/templated/index.scss";
+$color-background: white;
 
+// Used templated modules
+@import "./modules/custom/Steps/index.scss";
+@import "./modules/custom/MonthsSwarm/index.scss";
 // Generic/Helper templated modules
-@import "./modules/templated/Theme/index.scss";
 @import "./modules/templated/Caption/index.scss";
 @import "./modules/templated/Emoji/index.scss";
 @import "./modules/templated/Paragraph/index.scss";
+
+@import "./modules/templated/Ad/index.scss";
+@import "./modules/templated/Audio/index.scss";
+@import "./modules/templated/Caption/index.scss";
+@import "./modules/templated/Combo/index.scss";
+@import "./modules/templated/Conversation/index.scss";
+@import "./modules/templated/Credits/index.scss";
+@import "./modules/templated/Emoji/index.scss";
+@import "./modules/templated/Endmark/index.scss";
+@import "./modules/templated/Graphic/index.scss";
+@import "./modules/templated/Heading/index.scss";
+@import "./modules/templated/HTML/index.scss";
+@import "./modules/templated/Hero/index.scss";
+@import "./modules/templated/Image/index.scss";
+@import "./modules/templated/List/index.scss";
+@import "./modules/templated/Newsletter/index.scss";
+@import "./modules/templated/Note/index.scss";
+@import "./modules/templated/Quote/index.scss";
+@import "./modules/templated/Related/index.scss";
+@import "./modules/templated/StoryMeta/index.scss";
+@import "./modules/templated/Subscribe/index.scss";
+@import "./modules/templated/Timeline/index.scss";
+@import "./modules/templated/Video/index.scss";
 
 .inno {
   -webkit-font-smoothing: antialiased;
@@ -60,25 +84,4 @@
 }
 
 // For documentation code styling
-.inno {
-  pre {
-    background: white;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 11pt;
-    line-height: 1.4em;
-    color: #5b5b5b;
-    border: 1px solid #357abf;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    white-space: pre-wrap;
-    tab-size: 2;
-    font-weight: normal;
-    margin-bottom: 24px;
 
-    .tag {
-      color: #357abf;
-      background: #c9def1;
-    }
-  }
-}

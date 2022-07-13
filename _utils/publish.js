@@ -21,7 +21,7 @@ const { getConfig } = require("./config");
   const htmlBuffer = await fs.readFile('./dist/index.html');
 
   // Update Paths
-  const html = htmlBuffer.toString().replace(/__PATH__/g, 'https://interactives.inquirer.com/' + config.s3);
+  const html = htmlBuffer.toString().replace(/__PATH__/g, 'https://media.inquirer.com/' + config.s3);
 
   // Replace the story's content elements with one raw_html block with the new content
   storyData.ans.content_elements = [{

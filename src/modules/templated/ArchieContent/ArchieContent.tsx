@@ -25,6 +25,8 @@ import Timeline from "../Timeline";
 import Video from "../Video";
 import Subscribe from "../Subscribe";
 
+import Steps from "../../custom/Steps";
+
 const md = new MarkdownIt();
 md.use(MarkdownItMark);
 
@@ -46,7 +48,7 @@ export const RenderContent = (data, story = null, renderers = null, options = nu
     conversation: ({ quotes, border, mood, alternating }) => <Conversation quotes={quotes} border={border} mood={mood} alternating={alternating} />,
     divider: () => <Divider />,
     endmark: (value, i) => (
-      <EndmarkParagraph>{ value }</EndmarkParagraph>
+      <EndmarkParagraph>{md.renderInline(value)}</EndmarkParagraph>
     ),
     group: (value) => <div className="inno-group"><ArchieContent data={value} story={story} renderers={rends} options={opts} /></div>,
     graphic: ({ id, height, align }) => <Graphic id={id} height={height} align={align} />,
@@ -65,6 +67,7 @@ export const RenderContent = (data, story = null, renderers = null, options = nu
     ),
     quote: ({ text, credit, align }) => <Quote text={text} credit={credit} align={align} />,
     related: (story) => <Related story={story} />,
+    steps: (value) => <Steps steps={value} />,
     subscribe: ({ title, description }) => <Subscribe title={title} description={description} />,
     timeline: (value) => <Timeline data={value} />,
     video: ({ id, streams, autoplay, poster, caption, credit, align }, i) => (

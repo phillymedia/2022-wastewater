@@ -1,4 +1,4 @@
-$color-card-shadow: rgba(89, 87, 96, 0.1);
+$color-card-shadow: rgba(89,87,96,0.1);
 
 .inno-tl__body {
   margin-top: 40px;
@@ -51,7 +51,7 @@ $color-card-shadow: rgba(89, 87, 96, 0.1);
   z-index: 30;
   background-color: $color-base-concrete;
 
-  @include mq(0px, $bp-md) {
+  @include mq(0, $bp-md) {
     position: fixed;
     top: 62px;
     left: 0;
@@ -83,7 +83,7 @@ $color-card-shadow: rgba(89, 87, 96, 0.1);
 }
 
 .inno-tl__overview__items {
-  @include mq(0px, $bp-md) {
+  @include mq(0, $bp-md) {
     position: fixed;
     height: 0;
     overflow: hidden;
@@ -115,7 +115,7 @@ $color-card-shadow: rgba(89, 87, 96, 0.1);
   line-height: 1.4;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 2;
     top: 4px;
@@ -127,7 +127,7 @@ $color-card-shadow: rgba(89, 87, 96, 0.1);
   }
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 8px;
     left: 5px;
@@ -181,11 +181,6 @@ $color-card-shadow: rgba(89, 87, 96, 0.1);
     margin-top: -70px;
     padding-top: 70px;
   }
-
-  .inno-ad {
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
 .inno-tl__card {
@@ -194,10 +189,6 @@ $color-card-shadow: rgba(89, 87, 96, 0.1);
   box-shadow: 0 1px 4px $color-card-shadow, 0 3px 6px $color-card-shadow;
   padding: 20px;
   font-family: $font-style-base;
-
-  .inno-p {
-    color: $color-base-navy;
-  }
 }
 
 .inno-tl__card__date {

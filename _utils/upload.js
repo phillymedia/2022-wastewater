@@ -19,10 +19,10 @@ const uploadFiles = async (files, dest) => {
   const totalFiles = files.length;
 
   const uploadFile = async (file) => {
-    console.log('Uploading file', `${totalFiles - files.length}/${totalFiles}`, ':', `https://interactives.inquirer.com/${dest}/${file}`);
+    console.log('Uploading file', `${totalFiles - files.length}/${totalFiles}`, ':', `https://media.inquirer.com/${dest}/${file}`);
 
     const options = {
-      Bucket: 'inq-interactives',
+      Bucket: 'phillysync',
       Key: dest + '/' + file,
       Body: fs.readFileSync('./src/assets/' + file),
       ContentType: mime.getType(file),
@@ -60,7 +60,7 @@ const saveDestInConfig = async (dest) => {
   const month = `${date.getMonth() + 1}`.padStart(2, "0");
   const project = path.dirname(__dirname).split("/").pop().replace(year + '-', '');
   const timestamp = date.getTime();
-  const dest = `projects/${year}/${month}/${project}/${timestamp}/assets`;
+  const dest = `storage/inquirer/projects/${year}/${month}/${project}/${timestamp}/assets`;
 
   const files = glob.sync('**/*', {
     cwd: './src/assets',

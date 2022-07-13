@@ -2,7 +2,7 @@ import React from 'react';
 
 const handlise = string => {
   if (string) {
-    return string.toLowerCase('').replace(/ /g, '-').replace(/[^A-Za-z0-9-]/g, '');
+    return string.toLowerCase('').replace(/ /g, '-');
   }
 }
 

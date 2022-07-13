@@ -1,0 +1,127 @@
+// This file is temporary. It should be deleted if the new design-system becomes fully modular
+// It should only contain styles for shared design-system components that are used here
+// It only exists because importing individual component styles from the design-system requires 100s of mixins
+
+.inno {
+  // Paragraph
+  .inq-p {
+    font-size: $size-font-md;
+    text-size-adjust: none;
+    margin-bottom: 24px;
+    -webkit-font-smooth: antialiased;
+    -mox-osx-font-smoothing: grayscale;
+    color: $color-base-navy;
+    font-family: $font-style-base;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    line-height: 1.65em;
+    white-space: pre-line;
+
+    @include mq($bp-md) {
+      line-height: 1.8em;
+    }
+
+    &--has-dropcap:first-letter {
+      margin-top: 7px;
+      margin-right: 18px;
+      margin-bottom: 0;
+      margin-left: 0;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      padding-left: 25px;
+      padding-right: 25px;
+      background: $color-base-navy;
+      color: $color-base-white;
+      float: left;
+      font-family: $font-style-base;
+      font-size: 45px;
+      font-weight: 400;
+    }
+
+    a {
+      transition: box-shadow 0.25s ease;
+      color: $color-base-blue;
+      text-decoration: none;
+
+      &:hover {
+        box-shadow: inset 0 -1px 0 0 $color-base-blue;
+      }
+    }
+  }
+
+  // Timestamp
+  .inq-timestamp {
+    font-family: $font-style-base;
+    font-size: $size-font-sm;
+    line-height: 1.5em;
+    -webkit-font-smoothing: antialiased;
+
+    .inq-card--date {
+      color: $color-base-dark-gray;
+    }
+
+    .inq-timestamp__label {
+      color: $color-base-mid-gray;
+    }
+  }
+
+  // Author
+  .inq-author {
+    align-items: center;
+    color: $color-base-navy;
+    display: flex;
+    font-family: $font-style-base;
+    font-weight: $font-weight-base-normal;
+    line-height: 1.5em;
+    -webkit-font-smoothing: antialiased;
+
+    .inq-author-main {
+      display: flex;
+      width: 100%;
+
+      &.inq-byline :nth-child(n) {
+        font-weight: 300;
+        letter-spacing: 0;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+
+        &:not(.inq-timestamp__label):not(.inq-card--date) {
+          color: $color-base-navy;
+
+          a:hover {
+            color: $color-base-blue;
+          }
+        }
+      }
+    }
+
+    a {
+      color: $color-base-navy;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-base-blue;
+      }
+    }
+  }
+
+  pre {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 11pt;
+    line-height: 1.4em;
+    color: #5b5b5b;
+    border: 1px solid #357abf;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    white-space: pre-wrap;
+    tab-size: 2;
+    font-weight: normal;
+    margin-bottom: 24px;
+
+    .tag {
+      color: #357abf;
+      background: #c9def1;
+    }
+  }
+}

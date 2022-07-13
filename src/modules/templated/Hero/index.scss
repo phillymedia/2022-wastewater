@@ -25,8 +25,7 @@
   padding-top: 24px;
   padding-bottom: 24px;
   text-align: center;
-  background: var(--theme-color-primary);
-  color: var(--theme-color-contrast);
+  color: $color-base-navy;
 
   @include mq($bp-lg) {
     padding-top: 32px;
@@ -40,22 +39,22 @@
   font-size: $size-font-xxs;
   font-weight: bold;
   padding: 5px;
-  background: var(--theme-color-contrast);
-  color: var(--theme-color-contrast-invert);
+  background: $color-base-navy;
+  color: #fff;
   width: max-content;
   text-decoration: none;
   line-height: 2;
 }
 
 .inno-hero__headline {
-  font-family: var(--theme-font);
-  text-transform: var(--theme-font-transform);
-  font-size: calc(var(--theme-font-multiplier) * $size-font-xl);
+  font-family: $font-style-display-poster;
+  text-transform: uppercase;
+  font-size: $size-font-xl;
   margin: 5px 0;
   line-height: 1;
 
   @include mq($bp-lg) {
-    font-size: calc(var(--theme-font-multiplier) * $size-font-xxl);
+    font-size: $size-font-xxl;
     margin: 10px 0;
   }
 }
@@ -76,7 +75,8 @@
   }
 }
 
-$colors: (
+// Custom options
+$backgrounds: (
   "navy": $color-base-navy,
   "pink": $color-spot-pink,
   "orange": $color-spot-orange,
@@ -85,13 +85,41 @@ $colors: (
   "periwinkle": $color-spot-periwinkle,
   "cyan": $color-spot-cyan,
   "black": $color-base-black,
-  "white": $color-base-white,
-  "red": $color-base-red,
+  "red": $color-base-red
 );
 
-@each $class, $color in $colors {
+@each $class, $color in $backgrounds {
   .inno-hero--bg-#{$class} {
-    @extend .inno-background--#{$class};
+    & ~ * {
+      --theme-color: #{$color};
+
+      @if $class == "navy" or $class == "black" {
+        --theme-font-color: #{$color-base-white};
+      } @else {
+        --theme-font-color: #{$color-base-navy};
+      }
+    }
+
+    & ~ .inq-p--has-dropcap:first-letter {
+      background-color: var(--theme-color, $color-base-blue);
+      color: var(--theme-font-color, $color-base-white);
+    }
+
+    .inno-hero__content {
+      background-color: $color;
+
+      @if $class == "navy" or $class == "black" {
+        .inno-hero__headline,
+        .inno-hero__subheadline {
+          color: $color-base-white;
+        }
+
+        .inno-hero__eyebrow {
+          background-color: $color-base-white;
+          color: $color-base-navy;
+        }
+      }
+    }
   }
 }
 
@@ -104,6 +132,39 @@ $fonts: (
 
 @each $class, $font in $fonts {
   .inno-hero--font-#{$class} {
-    @extend .inno-font--#{$class};
+    & ~ * {
+      --theme-font: #{$font};
+      --theme-font-transform: uppercase;
+      --theme-font-multiplier: 1;
+
+      @if $class == "display" {
+        --theme-font-transform: none;
+      }
+
+      @if $class == "condensed" or $class == "display"{
+        --theme-font-size: #{$size-font-lg * 1.25};
+
+        @include mq($bp-lg) {
+          --theme-font-size: #{$size-font-xl * 1.25};
+        }
+      }
+    }
+
+    .inno-hero__headline,
+    & ~ .inq-p--has-dropcap::first-letter {
+      font-family: $font;
+
+      @if $class == "display" {
+        text-transform: none;
+      }
+
+      @if $class == "condensed" or $class == "display" {
+        font-size: $size-font-xl * 1.25;
+
+        @include mq($bp-lg) {
+          font-size: $size-font-xxl * 1.25;
+        }
+      }
+    }
   }
 }

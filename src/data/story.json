@@ -1,29 +1,151 @@
 {
-  "_id": "26K7UIYIUVBL3ACWTT6RZ4A26E",
-  "last_updated_date": "2021-12-07T14:42:14.855Z",
-  "display_date": "2021-10-21T14:31:19.717Z",
+  "_id": "64DCN4B5PBA6DBZRRLU723QWB4",
+  "last_updated_date": "2022-07-12T17:55:20.048Z",
   "credits": {
     "by": [
       {
-        "byline": "Test Author",
-        "name": "Test Author",
-        "org": "Test Organization",
+        "_id": "marin_max",
         "type": "author",
-        "version": "0.10.7"
+        "version": "0.5.8",
+        "name": "Max Marin",
+        "image": {
+          "url": "",
+          "version": "0.5.8"
+        },
+        "description": "I cover breaking news, with an interest in government accountability, political hijinks and weird stories that could only happen in Philly.\n",
+        "url": "https://www.inquirer.com/author/marin_max/",
+        "slug": "",
+        "social_links": [
+          {
+            "site": "email",
+            "url": "mmarin@inquirer.com"
+          },
+          {
+            "site": "twitter",
+            "url": "MaxMMarin"
+          }
+        ],
+        "socialLinks": [
+          {
+            "site": "email",
+            "url": "mmarin@inquirer.com",
+            "deprecated": true,
+            "deprecation_msg": "Please use social_links."
+          },
+          {
+            "site": "twitter",
+            "url": "MaxMMarin",
+            "deprecated": true,
+            "deprecation_msg": "Please use social_links."
+          }
+        ],
+        "additional_properties": {
+          "original": {
+            "_id": "marin_max",
+            "firstName": "Max",
+            "lastName": "Marin",
+            "secondLastName": "",
+            "byline": "Max Marin",
+            "role": "Staff writer",
+            "image": "",
+            "email": "mmarin@inquirer.com",
+            "affiliations": "",
+            "education": [],
+            "awards": [],
+            "books": [],
+            "podcasts": [],
+            "twitter": "MaxMMarin",
+            "bio_page": "https://www.inquirer.com/author/marin_max/",
+            "bio": "I cover breaking news, with an interest in government accountability, political hijinks and weird stories that could only happen in Philly.\n",
+            "longBio": "I cover breaking news, with an interest in government accountability, political hijinks and weird stories that could only happen in Philly.",
+            "slug": "",
+            "native_app_rendering": false,
+            "fuzzy_match": false,
+            "contributor": false,
+            "status": true,
+            "last_updated_date": "2021-11-23T23:46:00.596Z",
+            "type": "author"
+          }
+        }
+      },
+      {
+        "_id": "pananjady_kasturi",
+        "type": "author",
+        "version": "0.5.8",
+        "name": "Kasturi Pananjady",
+        "image": {
+          "url": "",
+          "version": "0.5.8"
+        },
+        "description": "I mine data for insights to inform reporting and visual storytelling, and have a particular passion for accountability journalism. ",
+        "url": "https://www.inquirer.com/author/pananjady_kasturi/",
+        "slug": "",
+        "social_links": [
+          {
+            "site": "email",
+            "url": "kpananjady@inquirer.com"
+          },
+          {
+            "site": "twitter",
+            "url": "kpananjady"
+          }
+        ],
+        "socialLinks": [
+          {
+            "site": "email",
+            "url": "kpananjady@inquirer.com",
+            "deprecated": true,
+            "deprecation_msg": "Please use social_links."
+          },
+          {
+            "site": "twitter",
+            "url": "kpananjady",
+            "deprecated": true,
+            "deprecation_msg": "Please use social_links."
+          }
+        ],
+        "additional_properties": {
+          "original": {
+            "_id": "pananjady_kasturi",
+            "firstName": "Kasturi",
+            "lastName": "Pananjady",
+            "secondLastName": "",
+            "byline": "Kasturi Pananjady",
+            "role": "Staff writer",
+            "image": "",
+            "email": "kpananjady@inquirer.com",
+            "affiliations": "",
+            "education": [],
+            "awards": [],
+            "books": [],
+            "podcasts": [],
+            "twitter": "kpananjady",
+            "bio_page": "https://www.inquirer.com/author/pananjady_kasturi/",
+            "bio": "I mine data for insights to inform reporting and visual storytelling, and have a particular passion for accountability journalism. ",
+            "longBio": "I mine data for insights to inform reporting and visual storytelling, and have a particular passion for accountability journalism. ",
+            "slug": "",
+            "native_app_rendering": false,
+            "fuzzy_match": false,
+            "contributor": false,
+            "status": true,
+            "last_updated_date": "2022-01-04T13:37:43.893Z",
+            "type": "author"
+          }
+        }
       }
     ]
   },
   "label": {},
   "headlines": {
-    "basic": "Documentation for All Archie Components",
+    "basic": "City Council said it expanded a property benefit for longtime Philly homeowners this year. But did it?",
     "meta_title": "",
     "mobile": "",
     "native": "",
-    "print": "The Archie Block Roundup",
+    "print": "",
     "tablet": "",
     "web": ""
   },
   "subheadlines": {
-    "basic": "If you need help figuring out how to build your templated interactive, you’ve come to the right place."
+    "basic": ""
   }
 }

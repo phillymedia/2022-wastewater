@@ -33,11 +33,6 @@ const setPresumedModulesFromData = async() => {
     if (a.indexOf(b) < 0 ) a.push(b);
     return a;
   },[]);
-
-  // timeline module can have ads hidden within
-  if (presumedModules.includes('timeline') && !presumedModules.includes('ad')) {
-    presumedModules.push('ad');
-  }
 }
 
 const setTemplatedModules = async() => {

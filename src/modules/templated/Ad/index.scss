@@ -1,20 +1,13 @@
-.inno-ad {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  margin-top: 0 !important; // to override bad ad code
-  margin-bottom: 0 !important; // to override bad ad code
-}
-
-.inno-ad--placeholder {
+.arcad.placeholder {
   width: 600px;
   max-width: 100%;
   height: 90px;
   background: #333;
+  margin: 48px auto;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 5px;
-  margin: 0 auto;
   line-height: 90px;
   text-transform: uppercase;
   color: #FFF;

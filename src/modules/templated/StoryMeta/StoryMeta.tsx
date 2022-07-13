@@ -29,6 +29,7 @@ export default function StoryMeta({ story, isUpdated = false }) {
       return (
         authors.map((author, i) => {
           const isLast = i === authorCount - 1;
+          console.log(i, authorCount);
           return <Fragment>{isLast ? 'and ': ''}{renderAuthor(author)}{isLast ? '' : ', '}</Fragment>
         })
       )

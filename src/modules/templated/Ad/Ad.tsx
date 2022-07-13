@@ -2,7 +2,7 @@ import React from "react";
 
 let currentAd = 0;
 
-const Ad = ({ slotName, articleId = "", size = "" }) => {
+const Ad = ({ slotName, articleId = "" }) => {
   currentAd++;
   const id = `ad${currentAd}010`;
 
@@ -13,8 +13,7 @@ const Ad = ({ slotName, articleId = "", size = "" }) => {
       data-article-id={ articleId }
       data-id={id}
       data-slotName={slotName}
-      data-size={size}
-      className={`inno-ad inno-ad--${currentAd} inno-uncontain js-inno-ad-wrapper arc-ad-wrapper container-column spaced spaced-top spaced-lg righ-rail-ad-desktop`}
+      className='arc-ad-wrapper container-column spaced spaced-top spaced-lg righ-rail-ad-desktop js-inno-ad-wrapper inno-uncontent'
     >
       <div className="container-row justify-center">
         <div

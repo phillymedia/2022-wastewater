@@ -5,14 +5,10 @@ const updateTimestamp = () => {
     const timeStampEl = document.querySelector('.js-timestamp');
 
     if (timeStampEl) {
-      const metaEl = (document.querySelector('meta[name="date"]') as HTMLMetaElement);
+      const timeStampFromPage = (document.querySelector('meta[name="date"]') as HTMLMetaElement).content; 
 
-      if (metaEl) {
-        const timeStampFromPage = metaEl.content;
-
-        if (timeStampFromPage) {
-          timeStampEl.querySelector('.js-timestamp-date').textContent = outputDateTime(timeStampFromPage);
-        }
+      if (timeStampFromPage) {
+        timeStampEl.querySelector('.js-timestamp-date').textContent = outputDateTime(timeStampFromPage);
       }
     }
   });

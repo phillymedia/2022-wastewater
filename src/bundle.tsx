@@ -1,29 +1,7 @@
-import templated from './modules/templated/client';
 import storyMeta from './modules/templated/StoryMeta/client';
+import ad from './modules/templated/Ad/client';
+import steps from './modules/custom/Steps/client';
 
-let interactive = document.querySelector('.js-inno');
-
-const startInteractive = () => {
-  templated.init();
-  storyMeta.init();
-}
-
-if (interactive) {
-  startInteractive();
-} else {
-  const observer = new MutationObserver((mutations, obs) => {
-    const interactive = document.querySelector('.js-inno');
-
-    if (interactive) {
-      obs.disconnect();
-      startInteractive();
-      return;
-    }
-  });
-
-  observer.observe(document, {
-    attributes: true,
-    childList: true,
-    subtree: true,
-  });
-}
+ad.init();
+steps.init();
+storyMeta.init();

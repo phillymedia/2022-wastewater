@@ -39,7 +39,7 @@ module.exports = {
         loader: 'string-replace-loader',
         options: {
           search: /__PATH__/g,
-          replace: 'https://interactives.inquirer.com/' + config.s3,
+          replace: 'https://media.inquirer.com/' + config.s3,
         }
       },
     ],

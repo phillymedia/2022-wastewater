@@ -1,9 +1,6 @@
 import React from "react";
 
 import TimelineCard from "./TimelineCard";
-import Ad from "../Ad";
-
-import story from "../../../data/story.json"
 
 const handlise = string => {
   if (string) {
@@ -38,7 +35,6 @@ export default function Timeline({ data }) {
               return(
                 <li className='inno-tl__timeline__item js-timeline-item' id={handlise(item.date)}>
                   <TimelineCard item={item} />
-                  {item.ad && <Ad slotName={item.ad} articleId={story._id} size="small" /> }
                 </li>
               )
             })}

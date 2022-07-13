@@ -1,0 +1,155 @@
+.inno-steps {
+  position: relative;
+  overflow: auto;
+}
+
+.inno-steps__step {
+  position: relative;
+  z-index: 2;
+  margin: 70vh auto;
+  padding: 8px;
+  background-color: $color-base-white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+
+  @include mq($bp-sm) {
+    padding: 12px;
+    margin: 70vh auto;
+  }
+
+  &:first-of-type {
+    margin-top: 80vh;
+  }
+
+  &:last-of-type {
+    margin-bottom: 90vh;
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  .inno-p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.inno-steps__content {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+
+  @include mq($bp-md) {
+    box-sizing: border-box;
+    padding-top: 80px;
+  }
+
+  .inno-steps.is-fixed & {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .inno-steps.is-bottom & {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.inno-steps__charts {
+  width: 280px;
+  margin: 0 auto;
+
+  @include mq($bp-sm) {
+    width: 400px;
+  }
+}
+
+.inno-steps__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.inno-steps__member {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.inno-steps__square {
+  position: relative;
+  border: 1px solid $color-base-light-gray;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  margin-bottom: 15px;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: $color-base-light-gray;
+    transition: transform 0.8s ease-in-out;
+    transform: translateY(-100%);
+  }
+}
+
+.inno-steps__hoods {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.inno-steps__label {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@mixin spanner($color) {
+  background-color: $color;
+  box-shadow: 4px 0 0 $color, -4px 0 0 $color;
+  color: #fff;
+  padding: 1px 0;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+
+
+
+.inno-span--extreme-caution {
+  @include spanner(#cc503e);
+}
+
+.inno-span--caution {
+  @include spanner(#f97b72);
+
+}
+
+.inno-span--mask-precaution-only {
+  @include spanner(	#FFD898);
+  color: $color-base-navy;
+
+}
+
+.inno-span--all-clear {
+  @include spanner(#b9e4d7);
+  color: $color-base-navy;
+}

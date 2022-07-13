@@ -2,6 +2,9 @@ const fetch = require("node-fetch");
 const Thumbor = require('thumbor');
 const secrets = require("../_config/secrets.json");
 
+const MarkdownIt = require('markdown-it');
+const md = new MarkdownIt();
+
 const deLinkify = (value) => {
   const markDownMatches = value.match(/(?<=\[).*?(?=\])/);
   return value = markDownMatches?.[0] || value;
@@ -16,11 +19,14 @@ const extractArcId = (value) => {
 }
 
 let prepText = (text) => {
+  // console.log( text );
   text = text.replace(/\*\*\*\*(\[[^\)]*\))\*\*\*\*/g, "$1");
+
   text = text.replace(
     /((?<=\s)|(?<=^))(\*+[\w !"\#$%&'()+,\-./:;<=>?@\[\\\]^_`{|}~]+)(\s+)(\*+)/,
     "$2$3$4"
   );
+
   text = text.replace("\u000b", "\n");
   text = text.replace(/(^|\n)([*\s]“.*”[^\n]*)(\n|$)/g, "\n>$2\n");
   text = text.replace(/\n/g, "\n\n");
@@ -29,7 +35,7 @@ let prepText = (text) => {
   text = text.replace(/^\*\*([^*]*) \*\*/g, "**$1** ");
   text = text.replace(/^\s*\**\s*$/gm, "");
   text = text.replace(/^(\**)\\/g, "$1");
-  text = text.replace(/([^\\\n*]?)([*_]+)(\s*)((?:.+?[\w]?))(\s*)(\2)/g, "$1$3$2$4$6$5");
+  text = text.replace(/([^\\\n*])([*_]+)(\s*)((?:.+?[\w]?))(\s*)(\2)/g, "$1$3$2$4$6$5");
 
   return text;
 };
@@ -107,10 +113,9 @@ const VideoParser = async (obj) => {
 
     try {
       const response = await fetch(
-        `https://api.inquirer.com/v1/arc-content/?_id=${id}&apikey=${secrets.gateway_apikey}&included_fields=_id,streams,credits,promo_image`
+        `https://api.inquirer.com/v1/arc-content/?_id=${id}&apikey=${secrets.gateway_apikey}&included_fields=_id,streams,credits`
       );
       const data = await response.json();
-
       obj.value = {
         ...obj.value,
         id: id,
@@ -118,7 +123,6 @@ const VideoParser = async (obj) => {
         streams: data.streams,
         caption: obj.value.caption || data.caption,
         credit: obj.value.credit || data.credits.by[0].name,
-        poster: data.promo_image ? await fetchResizedImageUrl(data.promo_image.url, 650) : null
       };
       console.log(`🎥 ${id}`);
     } catch (e) {

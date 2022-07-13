@@ -1,13 +1,12 @@
-.inq-endmark {
-  display: inline-block;
-  height: 1.1em;
-  width: 1.1em;
-  margin-left: 5px;
-  vertical-align: text-bottom;
-  margin-bottom: 2px;
-  fill: var(--theme-color-primary);
-
-  .inno-background--white & {
-    fill: $color-base-navy;
+.inq-p-endmark {
+  p:after {
+    content: " ";
+    display: inline-block;
+    background: url("https://media.inquirer.com/storage/inquirer/projects/assets/i-circle_navy.png") center center no-repeat;
+    background-size: contain;
+    height: 1.1em;
+    width: 1.1em;
+    margin-left: 5px;
+    vertical-align: text-bottom;
   }
 }

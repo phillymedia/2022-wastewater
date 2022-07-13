@@ -4,7 +4,7 @@
 }
 
 .inno-credits__header {
-  color: var(--theme-color-text-primary);
+  color: $color-base-navy;
   font-size: $size-font-sm;
   border-bottom: 1px solid $color-base-light-gray;
   padding-bottom: 4px;
@@ -14,7 +14,7 @@
 .inno-credits__roles {
   display: grid;
   gap: 8px;
-  color: var(--theme-color-text-secondary);
+  color: $color-base-dark-gray;
   font-size: $size-font-xs;
   line-height: 1.5;
 

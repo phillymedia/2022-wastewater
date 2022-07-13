@@ -1,0 +1,772 @@
+.inno-months {
+  position: relative;
+  width: 750px;
+  margin: 0 auto;
+}
+
+.inno-months__chart {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: $color-background;
+}
+
+.inno-months__data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+
+
+}
+
+.inno-months__axis--y {
+  .inno-months__axis-label {
+    text-anchor: end;
+  }
+}
+
+.inno-months__axis-label--x {
+  text-anchor: middle;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.inno-months__axis--x {
+  .inno-months__axis-label {
+    text-anchor: middle;
+  }
+}
+
+.inno-months__month-entry {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+  &--jan {
+    transform: translateX(36.5%);
+
+    .inno-months__axis-line {
+      transition: opacity 0.4s ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  &--jul {
+    transform: translateX(2%);
+
+    .inno-months__axis-line {
+      transition: opacity 0.4s ease-in-out;
+      opacity: 0;
+    }
+  }
+}
+
+.inno-months__axis-line {
+  stroke: rgba($color-base-navy, 0.3);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+  transition: opacity 0.4s ease-in-out;
+}
+
+// .inno-months__text {
+//   font-size: $size-font-md;
+//   font-weight: normal;
+//   fill: $color-base-dark-gray;
+//   transition: opacity 0.4s ease-in-out;
+// }
+
+.inno-months__axis-label {
+  font-size: $size-font-md;
+  fill: $color-base-dark-gray;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.inno-months__axis-label--y {
+  text-anchor: middle;
+}
+
+.inno-months__axis-label--x {
+  text-anchor: middle;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.inno-months__line {
+  fill: none;
+  stroke: $color-base-light-gray;
+  stroke-width: 3;
+  stroke-dasharray: 1;
+  transition: stroke-dashoffset 0.4s ease-in-out, stroke 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.inno-months__annot-bracket {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+  &--jan {
+    transform: translateX(36.5%);
+  }
+
+  &--jul {
+    transform: translateX(2%);
+  }
+}
+
+.inno-months__annot-bracket-line {
+  stroke: rgba($color-base-navy, 0.3);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
+.inno-months__annot-background {
+  fill: $color-background;
+  stroke: none;
+}
+
+.inno-months__annot-text {
+  font-size: $size-font-md;
+  fill: $color-base-dark-gray;
+}
+
+.inno-months__dot {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.inno-months__dot-text {
+  font-size: $size-font-md;
+  fill: $color-base-dark-gray;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.inno-months__dot-background {
+  fill:$color-background;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.inno-months__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.inno-months__iframe--initial {
+  opacity: 1;
+}
+//new steps here
+
+.inno-steps.is-initial-step {
+  .inno-months__iframe--initial {
+    opacity: 1;
+    
+  }
+}
+
+.inno-steps.is-pa-step {
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 1;
+    
+  }
+}
+
+.inno-steps.is-philly-step {
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 1;
+    
+  }
+}
+
+.inno-steps.is-aug-step {
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 1;
+    
+  }
+}
+
+.inno-steps.is-sept-step {
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--sept {
+    opacity: 1;
+    
+  }
+}
+
+.inno-steps.is-oct-step {
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--sept {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--oct {
+    opacity: 1;
+    
+  }
+}
+
+.inno-steps.is-nov-step {
+
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--sept {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--oct {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--nov {
+    opacity: 1;
+
+  }
+
+}
+  .inno-steps.is-otherstates-step {
+
+    .inno-months__iframe--initial {
+      opacity: 0;
+      
+    }
+  
+    .inno-months__iframe--pa {
+      opacity: 0;
+      
+    }
+    .inno-months__iframe--philly {
+      opacity: 0;
+      
+    }
+    .inno-months__iframe--aug {
+      opacity: 0;
+      
+    }
+    .inno-months__iframe--sept {
+      opacity: 0;
+      
+    }
+  
+    .inno-months__iframe--oct {
+      opacity: 0;
+      
+    }
+  
+    .inno-months__iframe--nov {
+      opacity: 0;
+  
+    }
+
+    .inno-months__iframe--allnom {
+      opacity: 1;
+  
+    }
+  }
+  
+    .inno-steps.is-intermediate-step {
+
+      .inno-months__iframe--initial {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--pa {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--philly {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--aug {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--sept {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--oct {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--nov {
+        opacity: 0;
+    
+      }
+  
+    
+      .inno-months__iframe--allnom {
+        opacity: 1;
+    
+      }
+
+      .inno-months__iframe--allma {
+        opacity: 1;
+    
+      }
+
+    }
+
+
+    .inno-steps.is-penultimate-step {
+
+      .inno-months__iframe--initial {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--pa {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--philly {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--aug {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--sept {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--oct {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--nov {
+        opacity: 0;
+    
+      }
+  
+    
+      .inno-months__iframe--allnom {
+        opacity: 0;
+    
+      }
+
+      .inno-months__iframe--allma {
+        opacity: 0;
+    
+      }
+
+      .inno-months__iframe--allm {
+        opacity: 0;
+    
+      }
+
+      .inno-months__iframe--penultimate {
+        opacity: 1;
+    
+      }
+    }
+    .inno-steps.is-final-step {
+
+      .inno-months__iframe--initial {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--pa {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--philly {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--aug {
+        opacity: 0;
+        
+      }
+      .inno-months__iframe--sept {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--oct {
+        opacity: 0;
+        
+      }
+    
+      .inno-months__iframe--nov {
+        opacity: 0;
+    
+      }
+  
+    
+      .inno-months__iframe--allnom {
+        opacity: 0;
+    
+      }
+
+      .inno-months__iframe--allma {
+        opacity: 0;
+    
+      }
+
+      .inno-months__iframe--allm {
+        opacity: 0;
+    
+      }
+
+      .inno-months__iframe--final {
+        opacity: 1;
+    
+      }
+
+}
+
+.inno-steps.is-another-step {
+
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--sept {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--oct {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--nov {
+    opacity: 0;
+
+  }
+
+
+  .inno-months__iframe--allnom {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allma {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allm {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--final {
+    opacity: 0;
+
+  }
+  .inno-months__iframe--another {
+    opacity: 1;
+
+  }
+
+}
+
+.inno-steps.is-realfinal-step {
+
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--sept {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--oct {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--nov {
+    opacity: 0;
+
+  }
+
+
+  .inno-months__iframe--allnom {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allma {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allm {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--final {
+    opacity: 0;
+
+  }
+  .inno-months__iframe--another {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--realfinal {
+    opacity: 1;
+
+  }
+
+}
+
+.inno-steps.is-real-step {
+
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--sept {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--oct {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--nov {
+    opacity: 0;
+
+  }
+
+
+  .inno-months__iframe--allnom {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allma {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allm {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--final {
+    opacity: 0;
+
+  }
+  .inno-months__iframe--another {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--realfinal {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--real {
+    opacity: 1;
+
+  }
+
+}
+
+.inno-steps.is-end-step {
+
+  .inno-months__iframe--initial {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--pa {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--philly {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--aug {
+    opacity: 0;
+    
+  }
+  .inno-months__iframe--sept {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--oct {
+    opacity: 0;
+    
+  }
+
+  .inno-months__iframe--nov {
+    opacity: 0;
+
+  }
+
+
+  .inno-months__iframe--allnom {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allma {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--allm {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--final {
+    opacity: 0;
+
+  }
+  .inno-months__iframe--another {
+    opacity: 0;
+
+  }
+
+  .inno-months__iframe--end {
+    opacity: 1;
+
+  }
+
+}

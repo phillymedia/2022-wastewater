@@ -10,8 +10,8 @@
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background: var(--theme-color-primary, $color-base-navy);
-  fill: var(--theme-color-contrast, white);
+  background: var(--theme-color, $color-base-navy);
+  fill: var(--theme-font-color, white);
   background-repeat: no-repeat;
   cursor: pointer;
   transition: background-color 0.2s, fill -0.2s;
@@ -32,7 +32,7 @@
   .inno-audio__playpause--play {
     width: 60px;
     height: 60px;
-    transform: translate(calc(-50% + 3px), -50%);
+    transform: translate( calc(-50% + 3px), -50%);
   }
 
   .inno-audio__playpause--pause {
@@ -147,3 +147,4 @@
   width: 7%;
   text-align: right;
 }
+

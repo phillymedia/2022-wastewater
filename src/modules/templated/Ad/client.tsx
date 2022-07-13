@@ -19,30 +19,24 @@ const getGlobalFunctions = () => {
 
 const addPlaceHolders = () => {
   document.querySelectorAll('.js-inno-ad').forEach((adElement: HTMLElement) => {
-    adElement.classList.add('inno-ad--placeholder');
+    adElement.classList.add('placeholder');
   })
 }
 
 const initalizeAllAds = () => {
   document.querySelectorAll('.js-inno-ad-wrapper').forEach((adElement: HTMLElement, i) => {
-    const isSmall = adElement.dataset.size == 'small';
-
     const adData = {
       "id": adElement.dataset.id,
       "slotName": adElement.dataset.slotname,
       "adType": "cube",
-      "dimensions": isSmall ? "[[300, 250]]" : "[[[970, 250],[970, 90],[728, 90]],[728, 90],[300, 250],[300, 250]]",
+      "dimensions": "[[[970, 250],[970, 90],[728, 90]],[728, 90],[300, 250],[300, 250]]",
       "sizemap": {
-        "breakpoints": isSmall ? "[[0, 0]]" : "[[1200, 0],[800, 0],[730, 0],[0, 0]]",
+        "breakpoints": "[[1200, 0],[800, 0],[730, 0],[0, 0]]",
         "refresh": true
       },
       "display": "all",
       "bidding": {
         "amazon": {
-          "enabled": true,
-          "slotSuffix": `-mrec_2${i + 1}_article`
-        },
-        "prebid": {
           "enabled": true,
           "slotSuffix": `-mrec_2${i + 1}_article`
         }

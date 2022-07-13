@@ -42,16 +42,6 @@ const Graphic = ({ id, height = 450, align = "default" }) => {
         ></div>
       </div>
     );
-  } else {
-    return (
-      <div className={`inno-graphic ${getAlignmentClass(align)}`}>
-        <iframe
-          className='inno-graphic__iframe'
-          src={id}
-          height={height}
-        ></iframe>
-      </div>
-    )
   }
 };
 
